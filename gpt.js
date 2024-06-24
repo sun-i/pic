@@ -111,7 +111,7 @@ var tianliGPT = {
 		var url = window.location.href;
 		const title = document.title;
 		const apiUrl =
-			'https://summary.tianli0.top/?content=${encodeURIComponent(content)}&token=${encodeURIComponent(tianliGPT_key)}';
+			`https://blogsummary.xin-sun.workers.dev/api/summary?token=12345&content=${encodeURIComponent(content)}`;
 		const timeout = 20000;
 		try
 		{
