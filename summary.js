@@ -1,4 +1,6 @@
 var tianliGPTIsRunning = false;
+var tianliGPT_postSelector = '.post-page-container .article-content-container .article-content';
+var tianliGPT_key = '12345';
 
 function insertAIDiv ( selector )
 {
