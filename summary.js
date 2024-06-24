@@ -1,7 +1,3 @@
-console.log(
-	"\n %c Post-Abstract-AI 开源博客文章摘要AI生成工具 %c https://github.com/zhheo/Post-Abstract-AI \n",
-	"color: #fadfa3; background: #030307; padding:5px 0;",
-	"background: #fadfa3; padding:5px 0;" )
 var tianliGPTIsRunning = false;
 
 function insertAIDiv ( selector )
@@ -34,7 +30,7 @@ function insertAIDiv ( selector )
 	const aiTagDiv = document.createElement( 'div' );
 	aiTagDiv.className = 'tianliGPT-tag';
 	aiTagDiv.id = 'tianliGPT-tag';
-	aiTagDiv.textContent = 'TianliGPT';
+	aiTagDiv.textContent = 'GPT';
 	aiTitleDiv.appendChild( aiTagDiv );
 	const aiExplanationDiv = document.createElement( 'div' );
 	aiExplanationDiv.className = 'tianliGPT-explanation';
@@ -63,7 +59,7 @@ var tianliGPT = {
 			if ( !container )
 			{
 				console.warn(
-					'TianliGPT：找不到文章容器。请尝试将引入的代码放入到文章容器之后。如果本身没有打算使用摘要功能可以忽略此提示。'
+					'找不到文章容器。请尝试将引入的代码放入到文章容器之后。如果本身没有打算使用摘要功能可以忽略此提示。'
 				);
 				return '';
 			}
@@ -93,7 +89,7 @@ var tianliGPT = {
 		catch ( e )
 		{
 			console.error(
-				'TianliGPT错误：可能由于一个或多个错误导致没有正常运行，原因出在获取文章容器中的内容失败，或者可能是在文章转换过程中失败。',
+				'错误：可能由于一个或多个错误导致没有正常运行，原因出在获取文章容器中的内容失败，或者可能是在文章转换过程中失败。',
 				e );
 			return '';
 		}
@@ -102,16 +98,12 @@ var tianliGPT = {
 	{
 		if ( !tianliGPT_key )
 		{
-			return "没有获取到key，代码可能没有安装正确。如果你需要在tianli_gpt文件引用前定义tianliGPT_key变量。详细请查看文档。";
-		}
-		if ( tianliGPT_key === "5Q5mpqRK5DkwT1X9Gi5e" )
-		{
-			return "请购买 key 使用，如果你能看到此条内容，则说明代码安装正确。";
+			return "没有获取到key，代码可能没有安装正确。如果你需要在文件引用前定义tianliGPT_key变量。详细请查看文档。";
 		}
 		var url = window.location.href;
 		const title = document.title;
 		const apiUrl =
-			`https://blogsummary.xin-sun.workers.dev/api/summary?token=12345&content=${encodeURIComponent(content)}`;
+			`https://blogsummary.xin-sun.workers.dev/api/summary?token=${encodeURIComponent(tianliGPT_key)}&content=${encodeURIComponent(content)}`;
 		const timeout = 20000;
 		try
 		{
