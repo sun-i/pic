@@ -124,8 +124,53 @@
         <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-42" value="采样点击，dios=True" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="390" y="850" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-44" value="随机选择5个正样本点和10个负样本点进行非迭代式训练" style="whiteSpace=wrap;html=1;rounded=1;spacing=0;align=center;" vertex="1" parent="1">
+        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-44" value="随机选择5个正点击和10个点击进行非迭代式训练" style="whiteSpace=wrap;html=1;rounded=1;spacing=0;align=center;" vertex="1" parent="1">
           <mxGeometry x="590" y="850" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-46" value="&lt;h2&gt;二阶段&lt;/h2&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#7EA6E0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="920" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-47" value="&lt;h4&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;伪掩码&lt;/font&gt;&lt;/h4&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="25" y="967" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Y0yDzkj-o2-V9cJ9AFSL-48" target="Y0yDzkj-o2-V9cJ9AFSL-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-48" value="根据边界框裁剪图像和掩码" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1030" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-52" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Y0yDzkj-o2-V9cJ9AFSL-49" target="Y0yDzkj-o2-V9cJ9AFSL-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-49" value="采样点击，dios=True" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="1030" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Y0yDzkj-o2-V9cJ9AFSL-51" target="Y0yDzkj-o2-V9cJ9AFSL-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-51" value="随机选择5个正样本点和10个负样本点" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1030" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Y0yDzkj-o2-V9cJ9AFSL-53" target="Y0yDzkj-o2-V9cJ9AFSL-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-53" value="将中心点作为正点击&lt;div&gt;边界框左上角和右下角作为负点击&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="474" y="1030" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Y0yDzkj-o2-V9cJ9AFSL-55" target="Y0yDzkj-o2-V9cJ9AFSL-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-55" value="输入模型" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="1030" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-57" value="生成伪掩码" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="770" y="1030" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-60" value="&lt;h4&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;迭代式训练&lt;/span&gt;&lt;/h4&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="35" y="1109" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y0yDzkj-o2-V9cJ9AFSL-63" value="正常的 RITM 训练" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="135" y="1128" width="120" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
